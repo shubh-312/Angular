@@ -1,0 +1,23 @@
+<!-- Interpolation -->
+<p>Welcome home {{user.username}}</p>
+
+<!-- Property Binding -->
+<img [src]="user.profileimage" alt="fallback content" width="100" height="100">
+
+<!-- break -->
+<br>
+<br>
+
+<!-- Event Binding -->
+<button (click)="updateUsername()">Update Username</button>
+
+<!-- break -->
+<br>
+<br>
+
+<!-- Two way binding -->
+<div>
+    <i>Name: </i>
+    <input type="text" [(ngModel)] = "user.name">
+</div>
+<p>Name: {{user.name}}</p>
