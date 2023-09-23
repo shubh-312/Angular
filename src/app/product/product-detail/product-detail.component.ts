@@ -15,12 +15,12 @@ export class ProductDetailComponent {
   name = '';
 
   @Output() 
-  bought = new EventEmitter();
+  bought = new EventEmitter<string>();
 
   // The buy method calls the emit method on the bought output event we created in the previous step. The emit
   //  method emits an event and notifies any component currently  listening to the event.
   buy() {
-    this.bought.emit();
+    this.bought.emit(this.name);
    }
 
 }

@@ -4,7 +4,7 @@
     <li (click)="selectedProduct = 'Microphone'">Microphone</li>
     <li (click)="selectedProduct = 'Wireless Keyboard'">Wireless Keyboard</li>
 </ul>
-<app-product-detail [name]="selectedProduct" (bought)="onBuy()"></app-product-detail>
+<app-product-detail [name]="selectedProduct" (bought)="onBuy($event)"></app-product-detail>
 
 <!-- 
     we use event binding to bind the onBuy method of ProductListComponent into the bought output property of the product 
