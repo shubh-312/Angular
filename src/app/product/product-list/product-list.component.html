@@ -4,6 +4,8 @@
     <li (click)="selectedProduct = 'Microphone'">Microphone</li>
     <li (click)="selectedProduct = 'Wireless Keyboard'">Wireless Keyboard</li>
 </ul>
-<app-product-detail [name]="selectedProduct" *ngIf="selectedProduct" (bought)="onBuy()"></app-product-detail>
-<p *ngIf="!selectedProduct">No product selected!</p>
+<app-product-detail [name]="selectedProduct" *ngIf="selectedProduct ; else noProduct" (bought)="onBuy()"></app-product-detail>
+<ng-template #noProduct>
+    <p>No product selected!</p>
+</ng-template>
 
