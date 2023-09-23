@@ -4,9 +4,14 @@
     <li (click)="selectedProduct = 'Microphone'">Microphone</li>
     <li (click)="selectedProduct = 'Wireless Keyboard'">Wireless Keyboard</li>
 </ul>
-<app-product-detail [name]="selectedProduct"></app-product-detail>
+<app-product-detail [name]="selectedProduct" (bought)="onBuy()"></app-product-detail>
 
-<!-- send data from product-list to product-detail -->
+<!-- 
+    we use event binding to bind the onBuy method of ProductListComponent into the bought output property of the product 
+    detail component. This approach is called output binding 
+-->
+
+<!-- send data from product-list to product-detail input binding-->
 <!-- 
     we use property binding to bind the value of the selectedProduct property into the name input property of the product 
     detail component. This approach is called input binding.
