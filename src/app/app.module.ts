@@ -23,8 +23,11 @@ import { AppComponent } from './app.component';
   // must import it first to start using it. The main application module imports BrowserModule
   // because it needs its functionality for loading the current application into the browser.
   imports: [
+
     //  BrowserModule: Configures an Angular application to run in the browser platform.
     BrowserModule,
+
+    // This performs and handles navigation in an Angular application
     AppRoutingModule
   ],
 
