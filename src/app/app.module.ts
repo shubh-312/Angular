@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductModule } from './product/product.module';
 import { SortPipe } from './product/sort.pipe';
+import { CopyrightDirective } from './copyright.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CopyrightDirective,
   ],
   imports: [
     BrowserModule,
