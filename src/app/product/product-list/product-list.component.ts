@@ -6,7 +6,8 @@ import { ProductService } from '../product.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
+  providers: [ProductService]
 })
 export class ProductListComponent implements AfterViewInit, OnInit{
 
@@ -17,7 +18,7 @@ export class ProductListComponent implements AfterViewInit, OnInit{
 
   //contructor injection pattern
   constructor(private productService: ProductService){
-    this.productService = new ProductService();
+    
   }
 
   ngOnInit(): void {
